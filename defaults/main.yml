@@ -1,0 +1,21 @@
+---
+# defaults file for haproxy
+
+# Service
+haproxy_enable_service: true
+haproxy_copy_templates: true
+haproxy_firewall_configure: true
+haproxy_firewall_rules:
+  - service: http
+
+# Frontend
+haproxy_frontend_port: 80
+
+# Backend
+haproxy_backend_name: app
+haproxy_backend_port: 80
+haproxy_backend_servers:
+  - name: web01
+    address: 192.168.0.1
+  - name: web02
+    address: 192.168.0.2

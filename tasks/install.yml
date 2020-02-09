@@ -1,0 +1,8 @@
+---
+# Install haproxy packages
+
+- name: packages are installed
+  package:
+    name: "{{ haproxy_packages_install }}"
+    state: present
+  become: true

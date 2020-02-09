@@ -1,0 +1,31 @@
+#---------------------------------------------------------------------
+# global
+#---------------------------------------------------------------------
+global
+  #debug
+
+#---------------------------------------------------------------------
+# defaults
+#---------------------------------------------------------------------
+defaults
+  mode http
+  timeout connect 5000ms
+  timeout client 50000ms
+  timeout server 50000ms
+
+#---------------------------------------------------------------------
+# frontend
+#---------------------------------------------------------------------
+frontend main
+    mode http
+    bind *:{{ haproxy_frontend_port }}
+    default_backend {{ haproxy_backend_name }}
+
+#---------------------------------------------------------------------
+# round robin backends
+#---------------------------------------------------------------------
+backend {{ haproxy_backend_name }}
+    balance roundrobin
+{% for server in haproxy_backend_servers %}
+    server {{ server.name }} {{ server.address }}:{{ haproxy_backend_port }}
+{% endfor %}

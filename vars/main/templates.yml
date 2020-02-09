@@ -1,0 +1,13 @@
+---
+# Configuration templates to copy
+_haproxy_templates_copy:
+  all:
+    - src: haproxy.cfg.j2
+      dest: /etc/haproxy/haproxy.cfg
+  CentOS_7: []
+  RedHat_7: []
+  CentOS_8: []
+  RedHat_8: []
+  Fedora_31: []
+  Debian_10: []
+  Ubuntu_18: []

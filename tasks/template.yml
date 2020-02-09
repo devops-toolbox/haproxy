@@ -1,0 +1,10 @@
+---
+# Template configuration files for haproxy
+
+- name: template is copied
+  template:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+  become: true
+  loop: "{{ haproxy_templates_copy }}"
+  when: haproxy_copy_templates
