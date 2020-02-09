@@ -8,10 +8,10 @@ haproxy
 Ansible galaxy:
 ---------------
 
-[https://galaxy.ansible.com/devops-toolbox.haproxy](https://galaxy.ansible.com/devops-toolbox.haproxy)
+[https://galaxy.ansible.com/devopstoolbox.haproxy](https://galaxy.ansible.com/devopstoolbox.haproxy)
 
 ```bash
-ansible-galaxy install devops-toolbox.haproxy
+ansible-galaxy install devopstoolbox.haproxy
 ```
 
 Requirements
@@ -63,7 +63,7 @@ Example Playbook
   tasks:
     - name: haproxy is configured
       import_role:
-        name: devops-toolbox.haproxy
+        name: devopstoolbox.haproxy
       vars:
         # defaults file for haproxy
 
@@ -96,4 +96,4 @@ MIT
 Author Information
 ------------------
 
-- [Mihai Criveti](https://www.linkedin.com/in/devops-toolbox.)
+- [Mihai Criveti](https://www.linkedin.com/in/devopstoolbox.)
