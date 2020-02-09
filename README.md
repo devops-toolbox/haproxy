@@ -96,4 +96,4 @@ MIT
 Author Information
 ------------------
 
-- [Mihai Criveti](https://www.linkedin.com/in/devopstoolbox.)
+- [Mihai Criveti](https://www.linkedin.com/in/crivetimihai)
